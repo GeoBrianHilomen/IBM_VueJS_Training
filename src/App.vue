@@ -1,12 +1,15 @@
 <script setup lang="ts">
-import TaskListView from './views/Task2/TaskListView.vue';
+import { RouterLink, RouterView } from 'vue-router'
+// @ts-ignore: Vue SFC module declaration missing in this project
+import HomeView from './views/Task3/HomeView.vue';
 
 
-// import Task from "./components/Task.vue";
-// import Task1 from "./views/Task1.vue";
 </script>
-
+  
 <template>
-  <!-- <Task1 /> -->
-  <TaskListView />
+
+    <main>
+    <!-- <HomeView /> -->
+    <RouterView />
+  </main>
 </template>
