@@ -8,9 +8,12 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useTaskStore }  from '../../stores/taskStore'
+import { storeToRefs } from 'pinia'
 
 const taskStore = useTaskStore()
 const route     = useRoute()
+
+const { tasks } = storeToRefs(taskStore)
 
 // TODO 1: Read route.query.error — if it equals 'notfound', show a warning banner
 const showErrorBanner = computed(() => route.query.error === 'notfound')
@@ -33,7 +36,7 @@ const showErrorBanner = computed(() => route.query.error === 'notfound')
     <!-- TODO 4: Render each task as a RouterLink to /task/:id -->
     <!-- Use <RouterLink :to="`/task/${task.id}`"> as the wrapper -->
     <ul class="task-list">
-      <li v-for="task in taskStore.tasks" :key="task.id">
+      <li v-for="task in tasks" :key="task.id">
         <!-- TODO 5: Wrap this in a RouterLink -->
         <RouterLink :to="`/task/${task.id}`">
           <span :class="{ done: task.done }">{{ task.name }}</span>

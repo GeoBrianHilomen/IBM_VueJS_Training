@@ -93,6 +93,7 @@ const emit = defineEmits(['complete', 'delete'])
       <button class="btn-complete" @click="emit('complete', props.task.id)">
         {{ props.task.done ? 'Undo' : 'Complete' }}
       </button>
+      
       <!-- TODO 8: Add Delete button — emits 'delete' with task.id -->
       <button class="btn-delete" @click="emit('delete', props.task.id)">
         Delete

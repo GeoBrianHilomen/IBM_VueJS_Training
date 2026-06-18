@@ -41,7 +41,7 @@ function goBack() {
     </div>
 
     <!-- This case is handled by the router guard, but good to have a fallback -->
-    <div v-if="false">
+    <div v-else>
       <p>Task not found.</p>
       <button @click="goBack">Go Back</button>
     </div>
