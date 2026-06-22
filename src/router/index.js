@@ -75,7 +75,9 @@ const routes = [
 
   // TODO 6: Add the /about route
   { path: '/about', component: AboutView },
-  {path: '/task4', component: () => import('../views/Task4/TaskListView.vue')}
+  {path: '/task4', component: () => import('../views/Task4/TaskListView.vue')},
+
+  {path: '/task5', component: () => import('../views/Task5/TodoListView.vue')}
 ]
 
 const router = createRouter({

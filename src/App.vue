@@ -2,7 +2,6 @@
 import { RouterLink, RouterView } from 'vue-router'
 // @ts-ignore: Vue SFC module declaration missing in this project
 import HomeView from './views/Task3/HomeView.vue';
-import TaskListView from './views/Task4/TaskListView.vue';
 
 </script>
   
@@ -14,10 +13,10 @@ import TaskListView from './views/Task4/TaskListView.vue';
         <RouterLink to="/home">Home</RouterLink>&nbsp
         <RouterLink to="/about">About</RouterLink>&nbsp
         <RouterLink to="/task4">Task4</RouterLink>&nbsp
+        <RouterLink to="/task5">Task5</RouterLink>&nbsp
       </nav>
     </header>
     <main>
-    <!-- <HomeView /> -->
 
     <RouterView />
   </main>
